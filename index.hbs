@@ -1,3 +1,4 @@
+{{!-- 第一行使用下面语句，表示应用默认模板(default.hbs)，本模板文件将被替换到默认模板文件的{{{body}}}位置 --}}
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
@@ -24,9 +25,11 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
 
         <div class="post-feed">
+            {{!-- 遍历文章列表，#foreach明显是一个迭代器，posts则是一个数组(JSON) --}}
             {{#foreach posts}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{!-- 带>的表达式表示引入，这里引入：partials/post-card.hbs模板文件 --}}
                 {{> "post-card"}}
 
             {{/foreach}}
