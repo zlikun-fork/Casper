@@ -1,16 +1,20 @@
 <nav class="site-nav">
     <div class="site-nav-left">
         {{^is "home"}}
+            {{!-- 暂不使用Logo，没有嘛
             {{#if @blog.logo}}
                 <a class="site-nav-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
             {{else}}
                 <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
             {{/if}}
+            --}}
+            <a class="site-nav-logo" href="{{@blog.url}}">{{@blog.title}}</a>
         {{/is}}
         {{#if @blog.navigation}}
             {{navigation}}
         {{/if}}
     </div>
+    {{!-- 隐藏首页的RSS功能
     <div class="site-nav-right">
         <div class="social-links">
             {{#if @blog.facebook}}
@@ -26,4 +30,5 @@
             <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@blog.url}}/rss/" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
         {{/if}}
     </div>
+    --}}
 </nav>

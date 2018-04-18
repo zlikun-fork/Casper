@@ -9,6 +9,7 @@
     </div>
     <span class="floating-header-divider">&mdash;</span>
     <div class="floating-header-title">{{title}}</div>
+    {{!-- 隐藏文章内容页的分享功能(文章向下拉的时候会出现)
     <div class="floating-header-share">
         <div class="floating-header-share-label">Share this {{> "icons/point"}}</div>
         <a class="floating-header-share-tw" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
@@ -20,6 +21,7 @@
             {{> "icons/facebook"}}
         </a>
     </div>
+    --}}
     <progress class="progress" value="0">
         <div class="progress-container">
             <span class="progress-bar"></span>
